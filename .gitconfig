@@ -1,3 +1,36 @@
 [user]
 	name = hujp
 	email = guyuejiangping@gmail.com
+[alias]
+	s = status
+	co = checkout
+	wc = whatchanged
+	sfetch = svn fetch
+	spull = svn rebase
+	spush = svn dcommit
+	ci = commit
+	br = branch
+	df = diff
+	l = log --pretty=format:"%Cblue%ar%Creset%x09%an%x09%Cblue%h%Creset%x20%x20%s"
+[merge]
+   tool = vim
+[mergetool "vim"]
+#    cmd = "gvim --noplugin --remote-tab-silent \"+set buftype=nowrite\"
+#    \"$PWD/$MERGED\" && sleep 1;\
+#    #           gvim --remote-send \":split $PWD/$REMOTE<CR>:set
+#    buftype=nowrite<CR>:vertical diffsplit $PWD/$LOCAL<CR>:vertical diffsplit
+#    $PWD/$BASE<CR>:set buftype=nowrite<CR><C-W>l\""
+#    #    cmd = "gvim --noplugin \"$PWD/$MERGED\" \
+#    #        +\":split $PWD/$REMOTE\" +\":set buftype=nowrite\" \
+#    #        +\":vertical diffsplit $PWD/$LOCAL\" +\":set buftype=nowrite\" \
+#    #        +\":vertical diffsplit $PWD/$BASE\" +\":set buftype=nowrite\" \
+#    #        +\":wincmd l\""
+	cmd = "vim --noplugin \"$PWD/$MERGED\" \
+		+\":split $PWD/$REMOTE\" +\":set buftype=nowrite\" \
+		+\":vertical diffsplit $PWD/$LOCAL\" +\":set buftype=nowrite\" \
+		+\":vertical diffsplit $PWD/$BASE\" +\":set buftype=nowrite\" \
+		+\":wincmd l\""
+[color]
+	ui = auto
+[log]
+	date = local
