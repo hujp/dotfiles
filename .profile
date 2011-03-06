@@ -24,3 +24,8 @@ fi
 # java configuration
 export JAVA_HOME=/home/hujp/Programs/JAVA/jdk1.6.0_24
 export PATH="$PATH:$JAVA_HOME/bin"
+
+# maven configuration
+export MAVEN_HOME=/home/hujp/Programs/apache-maven/apache-maven-3.0.2
+export PATH="$PATH:$MAVEN_HOME/bin"
+export CLASSPATH="$CLASSPATH:$MAVEN_HOME/lib"
